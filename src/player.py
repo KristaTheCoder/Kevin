@@ -39,7 +39,3 @@ class Player:
 
     def get_money(self):
         return self.money
-
-
-you = Player( "ace")
-print you.is_playing()
