@@ -29,6 +29,9 @@ class Player:
     def new_round(self):
         self.inGame = True
 
+    def win(self, pot):
+        self.money = self.money + pot
+
     #add all the getters
 
     def show_hand(self):
