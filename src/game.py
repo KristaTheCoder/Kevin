@@ -13,19 +13,29 @@ class Game:
         opponent2.new_round()
         self.pot = 0 # winnings at end of game
         self.deck = dict([('jack', 0), ('queen', 1), ('king', 2), ('ace', 3)])
-        play_order = {'first' : you , 'second' : opponent1 , 'third' : opponent2}
+        play_order = {'first' : you, 'second' : opponent1, 'third' : opponent2}
 
     def set_play_order(self):
-        ''' Come up with some way of deciding who is playing first aside from'''
+        #FIXME Come up with some way of deciding who is playing first aside from
         self.play_order = play_order
 
-    # For simplicity in building game we will assume everyone joins the game.
+    def play_round(self):
+        #FIXME design ways to pick actions for what each player should do
+        #THIS IS THE AI PART
+        play_order['first'].bet(1)
+        self.pot = self.pot + 1
+
+        play_order['second'].bet(1)
+        self.pot = self.pot + 1
+
+        play_order['third'].bet(1)
+        self.pot = self.pot + 1
+
     def deal(self):
         #every player bets 1 chip to enter game
         you.antes(1)
         opponent1.antes(1)
         opponent2.antes(1)
-
         self.pot = 3
 
         you.set_card(self.deck['jack'])
