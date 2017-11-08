@@ -11,6 +11,7 @@ class Game:
         you.new_round()
         opponent1.new_round()
         opponent2.new_round()
+        self.pot = 0 # winnings at end of game
         self.deck = dict([('jack', 0), ('queen', 1), ('king', 2), ('ace', 3)])
         play_order = {'first' : you , 'second' : opponent1 , 'third' : opponent2}
 
@@ -25,14 +26,26 @@ class Game:
         opponent1.antes(1)
         opponent2.antes(1)
 
+        self.pot = 3
+
         you.set_card(self.deck['jack'])
         opponent1.set_card(self.deck['queen'])
         opponent2.set_card(self.deck['king'])
 
-#single round of betting
-#mandatory bet at the beginning
-# we need to build three player objectss
-#need to play rounds
+#single round of betting /check /folding
+
+    def winner(self):
+        #TODO for all players in game check their card
+
+        #TODO find the max card
+
+        #TODO find player with max card and declare the winner
+
+        winner = opponent2
+        winner.win(self.pot)
+        self.pot = 0
+
+
 
 
 you = Player()
@@ -44,3 +57,6 @@ x.deal()
 print you.show_hand()
 print opponent1.show_hand()
 print opponent2.show_hand()
+
+x.winner()
+print opponent2.get_money()
