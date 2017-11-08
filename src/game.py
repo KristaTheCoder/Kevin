@@ -42,8 +42,7 @@ class Game:
         opponent1.set_card(self.deck['queen'])
         opponent2.set_card(self.deck['king'])
 
-#single round of betting /check /folding
-
+    #FIXME undo the hard coding
     def winner(self):
         #TODO for all players in game check their card
 
@@ -57,7 +56,7 @@ class Game:
 
 
 
-
+### This section is just to play with to maek sure the game works. 
 you = Player()
 opponent1 = Player()
 opponent2 = Player()
