@@ -4,8 +4,8 @@ Class for players who can play the game, and actions they can take in the game
 
 class Player:
     """Build a new player"""
-    def __init__(self, card):
-        self.card = card #expand this so that the same player can play multiple times
+    def __init__(self):
+        self.card = -1
         self.money = 1000000
         self.inGame = True
 
