@@ -1,6 +1,6 @@
 '''
 Game set-up for 3-player Kuhn Poker, A game takes three players.
-The person of interest is kevin, we always want kevin to win. 
+The person of interest is kevin, we always want kevin to win.
 '''
 
 from player import *
@@ -39,15 +39,20 @@ class Game:
         opponent2.antes(1)
         self.pot = 3
 
+        #FIXME deal randomly, remove hard coding
         kevin.set_card(self.deck['jack'])
         opponent1.set_card(self.deck['queen'])
         opponent2.set_card(self.deck['king'])
 
     #FIXME undo the hard coding
     def winner(self):
-        #TODO for all players in game check their card
+        potential_winners = []
+        for player in players:
+            if(player.is_playing()):
+                potential_winners.append(player.show_hand)
 
         #TODO find the max card
+        maxVal = max(potential_winners)
 
         #TODO find player with max card and declare the winner
 
@@ -61,6 +66,7 @@ class Game:
 kevin = Player()
 opponent1 = Player()
 opponent2 = Player()
+players = [kevin, opponent1, opponent2]
 x = Game()
 x.deal()
 
