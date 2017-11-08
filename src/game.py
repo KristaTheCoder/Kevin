@@ -19,7 +19,7 @@ class Game:
         self.play_order = play_order
 
     # For simplicity in building game we will assume everyone joins the game.
-    def deal(self, you, opponent1, opponent2):
+    def deal(self):
         #every player bets 1 chip to enter game
         you.antes(1)
         opponent1.antes(1)
@@ -39,7 +39,7 @@ you = Player()
 opponent1 = Player()
 opponent2 = Player()
 x = Game()
-x.deal(you, opponent1, opponent2)
+x.deal()
 
 print you.show_hand()
 print opponent1.show_hand()
