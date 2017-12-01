@@ -7,20 +7,27 @@ class Kevin(Player):
 
 	def act(self, state, card):
 		if betting.can_bet(state):
-    		if card == deck.ACE:
-				return betting.BET
-			else:
-				return betting.CHECK
-			else:
-				return betting.BET
+    		    if card == deck.ACE:
+		        return betting.BET
+                    elif card == deck.KING:
+                        if(random.Random() < (2/3)):
+                            return betting.BET
+                        else:
+                            return betting.CHECK
+                    elif card == deck.QUEEN:
+                        if(random.Random() < (1/3)):
+                            return betting.BET
+                        else:
+                            return betting.CHECK
+		    else:
+                        return betting.FOLD
 		else:
 			if card == deck.ACE:
 				return betting.CALL
 			else:
 				return betting.FOLD
     			
-		
-		return betting.FOLD
+	    
 
 	def __str__(self):
-		return 'Always Fold'
+		return 'Kevin 2.0'
