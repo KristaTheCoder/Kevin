@@ -20,7 +20,7 @@ class Kevin(Player):
                         else:
                             return betting.CHECK
 		    else:
-                        return betting.FOLD
+                        return betting.CALL
 		else:
 			if card == deck.ACE or card == deck.KING:
 				return betting.CALL
