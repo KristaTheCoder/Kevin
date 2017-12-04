@@ -1,9 +1,9 @@
 import io, re, socket, sys
 import kuhn3p.betting, kuhn3p.deck, kuhn3p.Player
+i
+import kuhn3p.players.Kevin
 
-import kuhn3p.players.Chump
-
-player  = kuhn3p.players.Chump(1, 1, 1)
+player  = kuhn3p.players.Kevin()
 address = sys.argv[1]
 port    = int(sys.argv[2])
 
