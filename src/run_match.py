@@ -6,8 +6,11 @@ rng.seed(31337)  # each seed corresponds to a different set of hands
 
 num_hands   = 3000
 the_players = [players.Kevin(), 
-    players.Chump(0.99, 0.01, 0.0), 
-    players.Bluffer(0.2) ]
+    #players.Chump(0.99, 0.01, 0.0),
+    #players.Chump(0.40, 0.40, 0.2),
+    players.Bluffer(0.2) ,
+    players.Kevin()]
+    #players.Bluffer(0.8)]
 
 total = [0, 0, 0]
 for hand in range(num_hands):
