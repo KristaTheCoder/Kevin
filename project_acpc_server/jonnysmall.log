@@ -1,0 +1,15 @@
+# name/game/hands/seed jonnysmall kuhn.limit.3p.game 10 5
+#--t_response 600000
+#--t_hand 600000
+#--t_per_hand 7000
+STATE:0:rff:As|Js|Qs:2|-1|-1:Kevin|Bob|Liam
+STATE:1:ccc:Qs|Ks|Js:-1|2|-1:Bob|Liam|Kevin
+STATE:2:ccrfc:Js|Ks|As:-1|-2|3:Liam|Kevin|Bob
+STATE:3:ccrff:Js|Qs|As:-1|-1|2:Kevin|Bob|Liam
+STATE:4:rcf:As|Ks|Js:3|-2|-1:Bob|Liam|Kevin
+STATE:5:crcf:Js|As|Ks:-1|3|-2:Liam|Kevin|Bob
+STATE:6:rfc:As|Qs|Ks:3|-1|-2:Kevin|Bob|Liam
+STATE:7:rff:As|Js|Qs:2|-1|-1:Bob|Liam|Kevin
+STATE:8:ccc:Js|Qs|Ks:-1|-1|2:Liam|Kevin|Bob
+STATE:9:ccc:Qs|Ks|Js:-1|2|-1:Kevin|Bob|Liam
+SCORE:0|6|-6:Kevin|Bob|Liam
