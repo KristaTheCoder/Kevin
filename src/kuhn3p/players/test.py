@@ -1,0 +1,3 @@
+import Kevin
+
+a = Kevin()
