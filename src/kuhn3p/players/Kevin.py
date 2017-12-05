@@ -25,7 +25,7 @@ class Kevin(Player):
 		else:
 			self.C = 0
 
-		probFunc = (6/10) * self.A + (2/10) * self.B + (2/10) * self.C
+		probFunc = (6/10)* random.random() + (2/10) * self.B + (2/10) * self.C
 		if betting.can_bet(state):
     		    if card == deck.ACE:
 		            return betting.BET

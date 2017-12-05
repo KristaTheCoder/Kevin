@@ -9,8 +9,8 @@ the_players = [players.Kevin(),
     #players.Chump(0.99, 0.01, 0.0),
     #players.Chump(0.40, 0.40, 0.2),
     players.Bluffer(0.2) ,
-    players.Kevin()]
-    #players.Bluffer(0.8)]
+    #players.Kevin()]
+    players.Bluffer(0.2)]
 
 total = [0, 0, 0]
 for hand in range(num_hands):
