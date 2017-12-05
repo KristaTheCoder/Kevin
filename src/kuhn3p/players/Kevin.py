@@ -53,5 +53,16 @@ class Kevin(Player):
 			    return betting.FOLD
 
 
+	def end_hand(self, position, card, state, shown_cards):
+		player = betting.actor(position) + 1
+
+		if (betting.folded(state, player)):
+			print("Player: " + str(player) + "has folded with card " + str(card))
+			print("Player: " + str(player) + "has lost " + str(betting.pot_contribution(state, player)))
+		else:
+			print("Player: " + str(player) + " is in showdown with card " + str(card))
+		if(card == 3):
+    			print("Player: " + str(player) + "has won the pot! " + str(betting.pot_size(state)))
+
 	def __str__(self):
 		return 'Kevin The Rubber Duck'
