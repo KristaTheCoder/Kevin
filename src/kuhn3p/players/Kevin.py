@@ -4,53 +4,38 @@ from kuhn3p import betting, deck, Player
 class Kevin(Player):
 	def __init__(self):
 		self.counter = 0
-		#Nash
-		self.A = 1
-		self.dic = {}
-		for i in range(13):
-			for card in range(4):
-				self.dic[(i,card)] = []
-		self.B = 0
-
-		self.c1 = random.randint(0,999)
-		self.c2 = random.randint(self.c1, 1000)
-
-		self.C = 0
-		self.lastGameInfo = []
-
+		
 	def act(self, state, card):
 		self.counter = self.counter + 1
-		if(self.counter > self.c1 and self.counter < self.c2):
-			self.C = 1
-		else:
-			self.C = 0
-
-		probFunc = (6/10)* random.random() + (2/10) * self.B + (2/10) * self.C
 		if betting.can_bet(state):
     		    if card == deck.ACE:
 		            return betting.BET
                 elif card == deck.KING:
-                    if(random.Random() < (probFunc)):
+                    if(random.Random() < 1/2):
                         return betting.BET
                     else:
                         return betting.CHECK
                 elif card == deck.QUEEN:
-                    if(random.Random() < (probFunc - 1/3)):
+                    if(random.Random() < 1/6):
 		                return betting.BET
                     else:
                         return betting.CHECK
 		        
 		else:
-		    if card == deck.ACE or card == deck.KING:
+                    if card == deck.ACE:
 	    		return betting.CALL
-	    	    else:
-			if(self.C == 1):
-                            if(random.Random() < random.Random()):
-			    	return betting.CALL
-			    else:
-		    		return betting.FOLD
-			else:
-			    return betting.FOLD
+                    elif card == deck.KING:
+                        if(self.counter % 2 == 0):
+                            return betting.CALL
+                        else:
+                            return betting.FOLD
+                    elif card == deck.QUEEN:
+                        if(random.Random() < 1/25):
+		    	    return betting.CALL
+                        else:
+                            return betting.FOLD
+		    else:
+			return betting.FOLD
 
 
 	def __str__(self):
