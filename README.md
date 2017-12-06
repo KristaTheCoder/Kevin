@@ -1,11 +1,14 @@
 # Kevin
 3-player Kuhn Poker agent
 
+Team Members: Dale Keith, Krista Shuckerow
+Team Name: Kevin the Rubber Duck
+
 ## How to Run
 
 To run the project, execute the startme.sh script located in the root directory. The startme.sh script takes in two parameters: the server address and the port.
 
-``` ./startme.sh addr port ```
+``` startme.sh addr port ```
 
 The script executes the python file ``` connect_to_dealer.py ```, which connects to ```dealer.c ``` from the project_acpc_server directory (``` project_acpc_server/dealer.c ```).
 
