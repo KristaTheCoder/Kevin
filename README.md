@@ -2,6 +2,7 @@
 3-player Kuhn Poker agent
 
 Team Members: Dale Keith, Krista Shuckerow
+
 Team Name: Kevin the Rubber Duck
 
 ## How to Run
