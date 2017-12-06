@@ -1,6 +1,5 @@
 import io, re, socket, sys
 import kuhn3p.betting, kuhn3p.deck, kuhn3p.Player
-i
 import kuhn3p.players.Kevin
 
 player  = kuhn3p.players.Kevin()
